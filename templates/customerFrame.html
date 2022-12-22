@@ -1,0 +1,51 @@
+{% extends 'page_cus.html' %}
+
+{% block content %}
+    <h1 class="title">{% block title %} Services {% endblock %}</h1>
+    <div class="content">
+{#        {% for service in services %}#}
+        {% for service in pagination.items %}
+            <div class="service">
+                <p><b>#{{ service.service_id }}</b></p>
+                <p>type: {{ service.type }}</p>
+                <p>name: {{ service.name }}</p>
+                <p>call duration: {{ service.call_time }} minutes per month</p>
+                <p>number of texts: {{ service.number_of_text }} messages per month</p>
+                <p>price: {{ service.price_per_month }} per month</p>
+                <p>price: {{ service.price_per_year }} per year</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+    {% if pagination.has_prev %}
+        <span>
+            <a class='page-number' href="{{ url_for('indexCustomer', page=pagination.prev_num) }}">
+                {{ '<<<' }}
+            </a>
+        </span>
+    {% endif %}
+
+    {% for number in pagination.iter_pages() %}
+        {% if pagination.page != number %}
+            <span>
+                    <a class='page-number'
+                        href="{{ url_for('indexCustomer', page=number) }}">
+                    {{ number }}
+                    </a>
+            </span>
+        {% else %}
+            <span class='current-page-number'>{{ number }}</span>
+        {% endif %}
+    {% endfor %}
+
+    {% if pagination.has_next %}
+        <span>
+            <a class='page-number'
+                href="{{ url_for('indexCustomer', page=pagination.next_num) }}">
+                {{ '>>>' }}
+            </a>
+        </span>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CustomerLogin</title>
+    <style>
+        .username{
+            width: 350px;
+            height: 100px;
+            position: center;
+            margin: 40px auto;
+        }
+        #username{
+            width: 100px;
+            height: 45px;
+            position: center;
+            margin-top: 50px;
+            margin-left: 17px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        .password{
+            width: 350px;
+            height: 100px;
+            position: center;
+            margin: 40px auto;
+        }
+        #password{
+            width: 100px;
+            height: 45px;
+            position: center;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+        }
+        #loginButton{
+            width: 120px;
+            height: 60px;
+            border-radius: 50px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right, #E3FDF5 0%, #FFE6FA 100%);
+            /*#9decf5,#005bff*/
+            margin-top: 390px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <div class="username">
+            <label>
+                <span>Please Enter Your Name: </span>
+                <input type="text" id ="username" name="username" placeholder="   UserID"  required>
+            </label>
+        </div>
+        <div class="password">
+            <label>
+                <span>Please Enter Your Password: </span>
+                <input type="password" id ="password" name="pwd" placeholder="   Password" autocomplete="off"  required>
+            </label>
+        </div>
+        <div class="loginButton">
+            <label>
+                <input type="submit" id="loginButton" value="Login" style="font-size: larger"><span style="color:red"><center >{{error}}</center> </span>
+            </label>
+        </div>
+    </form>
+</body>
+</html>

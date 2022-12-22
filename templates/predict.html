@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+</head>
+<body>
+    <h3>Churn Prediction</h3>
+        <div>
+            <form action="/result" method="POST">
+                <label for="income">Income</label>
+                <input type="text" id="income" name="income">
+                <br>
+                <label for="age">Overage</label>
+                <input type="text" id="age" name="age">
+                <br>
+                <label for="leftover">Leftover</label>
+                <input type="text" id="leftover" name="leftover">
+                <br>
+                  <label for="house">House</label>
+                  <input type="text" id="house" name="house">
+                  <br>
+                  <label for="handsetPrice">Handset_Price</label>
+                  <input type="text" id="handsetPrice" name="handsetPrice">
+                  <br>
+                  <label for="calls">Over 15-minutes calls per month</label>
+                  <input type="text" id="calls" name="calls">
+                  <br>
+                  <label for="callDuration">Call Duration</label>
+                  <input type="text" id="callDuration" name="callDuration">
+                  <br>
+                  <label for="satisfaction">Reported Satisfaction</label>
+                  <select id="satisfaction" name="satisfaction">
+                      <option value="0">very unsatisfied</option>
+                      <option value="1">unsatisfied</option>
+                      <option value="2">average</option>
+                      <option value="3">satisfied</option>
+                      <option value="4">very satisfied</option>
+                  </select>
+                  <br>
+                  <label for="usageLevel">Reported Usage Level</label>
+                  <select id="usageLevel" name="usageLevel">
+                      <option value="0">very little</option>
+                      <option value="1">little</option>
+                      <option value="2">average</option>
+                      <option value="3">high</option>
+                      <option value="4">very high</option>
+                  </select>
+                  <br>
+                  <label for="consideringChange">Considering change of plan</label>
+                  <select id="change" name="change">
+                      <option value="0">actively looking into it</option>
+                      <option value="1">considering</option>
+                      <option value="2">no</option>
+                      <option value="3">perhaps</option>
+                      <option value="4">never thought</option>
+                  </select>
+                  <br>
+                  <label for="profitability">Profitability</label>
+                  <input type="text" id="profitability" name="profitability">
+                  <br>
+                  <label for="college">College</label>
+                  <select id="college" name="college">
+                      <option value="0">No</option>
+                      <option value="1">Yes</option>
+                  </select>
+                  <br>
+                  <input type="submit" value="Submit">
+            </form>
+        </div>
+</body>
+</html>

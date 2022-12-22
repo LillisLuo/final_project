@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        #customerLogin{
+            width: 120px;
+            height: 60px;
+            border-radius: 50px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: 390px;
+            background-image: linear-gradient(to right, #E3FDF5 100%, #FFE6FA 0% )
+            /*palegreen,mediumspringgreen*/
+        }
+        #managerLogin{
+            width: 120px;
+            height: 60px;
+            border-radius: 50px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin-top: 500px;
+            background-image: linear-gradient(to right, #E3FDF5 100%, #FFE6FA 0% )
+            /*palegreen,mediumspringgreen*/
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function toCustomerLogin(){
+            window.location.href="customerLogin"
+        }
+
+        function toManagerLogin(){
+            window.location.href="managerLogin"
+        }
+    </script>
+    <form method="post">
+{#        <button type="button"> Customer </button>#}
+{#        <button type="button"> Manager </button>#}
+        <div class="customerLogin">
+            <label>
+                <input type="button" id="customerLogin" value="Customer" onclick="toCustomerLogin()">
+            </label>
+        </div>
+        <div class="managerLogin">
+            <label>
+                <input type="button" id="managerLogin" value="Manager" onclick="toManagerLogin()">
+            </label>
+        </div>
+    </form>
+</body>
+</html>
